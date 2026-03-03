@@ -1,0 +1,1589 @@
+[
+  {
+    "id": "ef9947c9-1f99-495b-9a37-d96ada183a43",
+    "text": "But at least your family wasn't Jewish!",
+    "target": [
+      "jewish folks"
+    ],
+    "final_confidence": 0.92,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence \"But at least your family wasn’t Jewish!\" is an example of anti‑semitic bias. By saying that not being Jewish is a ‘good’ or ‘lucky’ thing, the speaker implies that Jewishness is negative or undesirable. The phrase \"at least\" frames the lack of Jewish identity as a relief or advantage, reinforcing a negative stereotype that Jewish people are somehow problematic or a burden. Thus the statement covertly conveys prejudice and a discriminatory view toward Jews.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The statement ‘But at least your family wasn’t Jewish!’ carries an anti‑Jewish bias, implying that being Jewish is undesirable or associated with negative stereotypes. The provided contextual evidence lists harmful tropes—obsession with the Holocaust, intent to overtake whites, belief in gas chambers, ethnic cleansing, and brainwashing—underscoring the speaker’s implicit reliance on these stereotypes to view Jewish identity as a threat or flaw.",
+        "confidence": 0.92,
+        "nodes_queried": [
+          "jewish folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "jewish folks",
+            "predicate": "has stereotype",
+            "object": "jews are obsessed with the holocaust",
+            "source": "local"
+          },
+          {
+            "subject": "jewish folks",
+            "predicate": "has stereotype",
+            "object": "jews want to overtake whites",
+            "source": "local"
+          },
+          {
+            "subject": "jewish folks",
+            "predicate": "has stereotype",
+            "object": "jews belong in gas chambers",
+            "source": "local"
+          },
+          {
+            "subject": "jewish folks",
+            "predicate": "has stereotype",
+            "object": "jewish people ethinically cleanse",
+            "source": "local"
+          },
+          {
+            "subject": "jewish folks",
+            "predicate": "has stereotype",
+            "object": "jewish people brainwash people with propaganda.",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "jewish folks",
+              "p": "has stereotype",
+              "o": "jews are obsessed with the holocaust"
+            },
+            {
+              "s": "jewish folks",
+              "p": "has stereotype",
+              "o": "jews want to overtake whites"
+            },
+            {
+              "s": "jewish folks",
+              "p": "has stereotype",
+              "o": "jews belong in gas chambers"
+            },
+            {
+              "s": "jewish folks",
+              "p": "has stereotype",
+              "o": "jewish people ethinically cleanse"
+            },
+            {
+              "s": "jewish folks",
+              "p": "has stereotype",
+              "o": "jewish people brainwash people with propaganda."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c8bd645a-5b7c-48b1-8b35-2aacdef2b5db",
+    "text": "most recent fake feminist luring unschooled into mohammed trap of subjugation & abuse ; learn kill plan at",
+    "target": [
+      "Muslims"
+    ],
+    "final_confidence": 0.92,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The statement blends several hateful tropes: it brands feminist advocacy as a false, manipulative ideology; it accuses Muslims—specifically the figure of Mohammed—of creating a trap that enslaves and abuses women; it encourages violent action with the phrase ‘learn kill plan at.’  The implicit bias is misogynistic (denigrating women and feminists), Islamophobic (attributing malevolent intent to Muslims and Islam), and violent (suggesting the need for lethal retaliation). The text conveys a conspiratorial worldview that vilifies both women and a religious group while advocating hostility.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The passage propagates an anti‑Muslim stereotype by depicting Islam (and its followers) as a deceptive, oppressive force that subjugates and abuses people. It presents Muslim ideology as a \"trap\" and implies that Muslims are manipulative and harmful, reflecting a bias that conflates the religion with malevolence.",
+        "confidence": 0.92,
+        "nodes_queried": [
+          "Muslims"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "muslims",
+            "predicate": "http://www.wikidata.org/prop/direct/p31",
+            "object": "ethnic group",
+            "source": "wikidata"
+          },
+          {
+            "subject": "muslims",
+            "predicate": "http://www.wikidata.org/prop/direct/p140",
+            "object": "islam",
+            "source": "wikidata"
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "wikidata": [
+            {
+              "s": "muslims",
+              "p": "http://www.wikidata.org/prop/direct/p31",
+              "o": "ethnic group"
+            },
+            {
+              "s": "muslims",
+              "p": "http://www.wikidata.org/prop/direct/p140",
+              "o": "islam"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "e8484746-814c-40f5-aa51-8e23689427e4",
+    "text": "Why do they have trees in the ghetto? Mass transit.",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.73,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The phrase implicitly portrays trees appearing in low‑income or “ghetto” neighborhoods as a result of mass‑transit planning rather than a genuine community‑driven environmental improvement. By linking greenery to transit infrastructure, it suggests that the primary purpose of such amenities is to serve commuters, thereby reinforcing a stereotype that ghettos are characterized mainly by a lack of resources and by the functional needs of the city rather than by the well‑being or agency of their residents. This framing carries a subtle bias that equates ghetto improvements with transport convenience, implying that the area’s development is driven by logistical considerations rather than equity or local needs.",
+        "confidence": 0.75,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The utterance implicitly reinforces the stereotype that the \"ghetto\" is a predominantly Black neighborhood lacking natural elements such as trees, and that the presence of trees there is an exception attributable to mass transit. This reflects a bias linking racialized urban areas with poor environmental infrastructure and a reliance on public transportation, perpetuating the notion that Black communities are defined by substandard living conditions and institutional neglect.",
+        "confidence": 0.73,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "alludes to violence toward blacks",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "are bought",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "all blacks go to prison.",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "black folks are items",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "alludes to violence toward blacks"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "are bought"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "all blacks go to prison."
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "black folks are items"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "d0670f83-5a78-43bf-a5fc-591a325981e1",
+    "text": "Aw he was going to send the money back to his niglet family in nigeria ...",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.98,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence uses a derogatory slur ('niglet') to refer to a Nigerian family, indicating a racist bias. Implicitly it normalizes demeaning language toward Black people and perpetuates negative stereotypes, while framing the act of sending money back as part of that prejudiced context.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The text contains the derogatory slur 'niglet', which dehumanizes the speaker’s Black family and reflects negative stereotypes about Black people, such as violence, criminality, or commodification, as indicated by the contextual evidence.",
+        "confidence": 0.98,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "alludes to violence toward blacks",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "are bought",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "all blacks go to prison.",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "black folks are items",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "alludes to violence toward blacks"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "are bought"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "all blacks go to prison."
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "black folks are items"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "b5f43b35-ccbb-4ac2-ae4b-01914363b12c",
+    "text": "Why do black people like basketball? Because you run, jump, shoot, and steal",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.9,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence embeds a racial stereotype that suggests black people are primarily drawn to basketball because of physical traits such as speed, agility, and an affinity for ‘stealing’ (either in the literal sense of taking the ball or figuratively implying a propensity for taking advantage). It implicitly equates a whole racial group with a single athletic characteristic and a particular style of play, thereby reducing individuals to an oversimplified, biologically deterministic profile. This bias promotes the harmful notion that black people are naturally superior or inclined toward certain sports, which can reinforce segregation, marginalize other talents, and perpetuate racial prejudice.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The statement perpetuates an implicit bias that Black people are naturally inclined to enjoy basketball because of their perceived physical agility and, more problematically, because of a stereotype that associates them with violent or criminal behaviors such as stealing. It reinforces racial stereotypes that link athleticism with aggression and criminality, reducing a diverse group to a single, negative caricature.",
+        "confidence": 0.9,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "alludes to violence toward blacks",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "are bought",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "all blacks go to prison.",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "black folks are items",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "alludes to violence toward blacks"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "are bought"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "all blacks go to prison."
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "black folks are items"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "283fa3fd-afd0-43ef-afd0-4eabc8e8cde8",
+    "text": "What breaks when you give it to a 5 year old? Their pelvis.",
+    "target": [
+      "sexual assault victims"
+    ],
+    "final_confidence": 0.95,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The joke plays on the expectation of a play‑on‑words answer and replaces a neutral or whimsical reply with a reference to a child’s pelvis breaking.  The implicit meaning is that a 5‑year‑old—particularly a girl, given the sexual overtones of the word ‘pelvis’—is physically fragile and that giving them something (implicitly something heavy or risky) could cause injury.  This conveys a sexist stereotype that girls (or children) are delicate and prone to injury, reinforcing gendered and age‑based assumptions about bodily vulnerability. The humor is rooted in an exaggerated, demeaning view of the child’s body rather than a neutral observation.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The joke implies that a five‑year‑old’s pelvis is fragile enough to break, framing it as a punchline about sexual assault. This reflects a stereotype that sexual assault of children is a trivial or humorous act, thereby trivializing the harm to victims and perpetuating a sexual violence bias.",
+        "confidence": 0.95,
+        "nodes_queried": [
+          "sexual assault victims"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "sexual assault victims",
+            "predicate": "has stereotype",
+            "object": "trivializes harm to victims.",
+            "source": "local"
+          },
+          {
+            "subject": "sexual assault victims",
+            "predicate": "has stereotype",
+            "object": "it's funny to sexually assault babies",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "sexual assault victims",
+              "p": "has stereotype",
+              "o": "trivializes harm to victims."
+            },
+            {
+              "s": "sexual assault victims",
+              "p": "has stereotype",
+              "o": "it's funny to sexually assault babies"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c80b0096-7e86-4ed8-9168-081ab3272acb",
+    "text": "What do transgender people and pedophiles have in common? They are stuck in the wrong body.",
+    "target": [
+      "trans women, trans men"
+    ],
+    "final_confidence": 0.0,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The statement covertly conveys a hateful and false equivalence: it portrays transgender people as morally and psychologically deviant, just as pedophiles are widely understood to be. By claiming that both groups are \"stuck in the wrong body,\" the text reduces trans identity to a medical or psychological disorder, implying it is a mistake that should be corrected. It also demonizes transgender people by equating them with a group that engages in illegal sexual activity with minors, thereby delegitimizing their lived experience and perpetuating transphobic stereotypes. The bias is transphobic and criminalizing, using dehumanizing language to reinforce stigma and misinformation about both communities.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "2403e415-5d0e-42cf-8efc-26ccdc4e9fd5",
+    "text": "What do you call an angry mob with Down syndrome? Attack of the Clones",
+    "target": [
+      "mentally disabled folks"
+    ],
+    "final_confidence": 0.88,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The joke is an ableist, demeaning remark that treats people with Down syndrome as a homogenous, de‑individualized group.  By pairing the phrase ‘angry mob’ with the condition, it suggests that individuals with Down syndrome are a collective, almost identical ‘clone’—a literal and figurative insult that equates a medical condition with being a ‘clone’ and a mob of violent people.  This reflects a negative stereotype that people with disabilities lack individuality and are easily grouped and judged, and it is both dehumanizing and offensive.\n\nThe implicit meaning is a derogatory play on words that ridicules the disability and the idea of a mob, reducing both to a simplistic, hateful caricature.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The joke equates an angry mob of people with Down syndrome to the film \"Attack of the Clones,\" implying that people with Down syndrome are merely a clone-like, interchangeable group, thereby trivializing their individuality and reinforcing ableist stereotypes that dehumanize and marginalize people with intellectual disabilities.",
+        "confidence": 0.88,
+        "nodes_queried": [
+          "mentally disabled folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "mentally disabled folks",
+            "predicate": "has stereotype",
+            "object": "mentally disabled people are just a burden",
+            "source": "local"
+          },
+          {
+            "subject": "mentally disabled folks",
+            "predicate": "has stereotype",
+            "object": "mentally disabled people should be bullied",
+            "source": "local"
+          },
+          {
+            "subject": "mentally disabled folks",
+            "predicate": "has stereotype",
+            "object": "folks with mental disabilities need batteries",
+            "source": "local"
+          },
+          {
+            "subject": "mentally disabled folks",
+            "predicate": "has stereotype",
+            "object": "mentally disabled people should die.",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "mentally disabled folks",
+              "p": "has stereotype",
+              "o": "mentally disabled people are just a burden"
+            },
+            {
+              "s": "mentally disabled folks",
+              "p": "has stereotype",
+              "o": "mentally disabled people should be bullied"
+            },
+            {
+              "s": "mentally disabled folks",
+              "p": "has stereotype",
+              "o": "folks with mental disabilities need batteries"
+            },
+            {
+              "s": "mentally disabled folks",
+              "p": "has stereotype",
+              "o": "mentally disabled people should die."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "289e95c6-804c-4968-98c1-48daced17342",
+    "text": "Porch monkey 4 Life",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.95,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The phrase \"Porch monkey 4 Life\" is a reference to an internet meme that originated on 4chan and other imageboards. The meme centers around a specific image of an older male, usually wearing a hat and jacket, standing on a porch. The caption \"Porch monkey 4 Life\" (with \"4\" standing for \"for\") is a playful, often self‑referential way for meme‑culture participants to identify with or celebrate that particular persona. Implicitly, the phrase signals membership in a niche online community that values this meme; it often carries a light‑hearted, affectionate tone among insiders, but it can also serve as a form of social categorization that highlights age, gender, and generational differences. Because the image is of a middle‑aged male, the meme can unintentionally reinforce stereotypes about older men (e.g., being a bit eccentric, laid‑back, or nostalgic). In some contexts the phrase may be used mockingly or derisively toward the depicted demographic, whereas in others it is embraced as a badge of belonging. Thus, the implicit meaning is a cultural signifier of in‑group identity, while the bias lies in the potential age‑and‑gender stereotyping inherent in labeling that demographic as a \"porch monkey.\"",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The phrase \"Porch monkey 4 Life\" is a derogatory racial slur that equates black people to monkeys, reflecting a dehumanizing stereotype that perpetuates violence, criminality, and objectification of black folks.",
+        "confidence": 0.95,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "alludes to violence toward blacks",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "are bought",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "all blacks go to prison.",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "black folks are items",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "alludes to violence toward blacks"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "are bought"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "all blacks go to prison."
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "black folks are items"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "a65d43d0-50fa-4af5-bb3f-686b469054c5",
+    "text": "Iniziano le scuole, immigrati già pronti a spacciare URL",
+    "target": [
+      "immigrati"
+    ],
+    "final_confidence": 0.9,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence is a stereotype that links immigrants to negative online behavior. It implies that, as school starts, immigrants are already ready to ‘spaccare’ (i.e., hack, spam, or widely share) URLs, which carries an implicit accusation of them engaging in illicit or disruptive cyber activity. The choice of informal slang (“spacciare”) reinforces a dismissive, conspiratorial tone, presenting immigrants as a threat or nuisance in the digital realm. This reflects a bias that portrays immigrants as prone to wrongdoing or as an untrustworthy group in the context of internet use.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The sentence implicitly portrays migrants as ready to engage in harmful online activity (spreading URLs), echoing negative stereotypes of migrants as delinquents and threats to social order. The provided context supports this bias by listing stereotypes that migrants invade, resist new arrivals, are criminal, and demand strict punishment, all of which contribute to a perception of migrants as a destabilizing force.",
+        "confidence": 0.9,
+        "nodes_queried": [
+          "immigrati"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "i migranti invadono il paese",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "i migranti non vogliono nuovi migranti",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "migranti sono delinquenti",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "l'immigrazione in italia è senza controllo",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "i migranti richiedono punizioni severe",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "i migranti invadono il paese"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "i migranti non vogliono nuovi migranti"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "migranti sono delinquenti"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "l'immigrazione in italia è senza controllo"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "i migranti richiedono punizioni severe"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "8f793fc1-3a80-485a-83d7-0a9c455dd661",
+    "text": "newly established white student unions see an upsurge in support as more white students find a legitimate voice to express their frustration",
+    "target": [
+      "Minorities"
+    ],
+    "final_confidence": 0.65,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence implicitly conveys that white students feel ignored by mainstream student bodies, prompting them to create separate unions where they can voice their grievances. By labeling their frustration as \"legitimate\", the text privileges the concerns of white students while neglecting similar or more systemic frustrations that students of color or other marginalized groups may experience. This framing signals a bias that centers white experiences as primary and normalizes a form of segregation within student representation, suggesting that white students’ issues are inherently valid while others are not. The tone subtly endorses the establishment of white‑centric organizations at the expense of more inclusive, equitable structures.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The passage implicitly treats white students as a distinct and unified group whose grievances require a separate union, suggesting that their concerns are unique and perhaps inadequately addressed by existing student bodies. This framing carries an implicit racial bias by reinforcing a stereotype that white students must organize separately to legitimize their frustration, thereby marginalizing the voices of other student groups.",
+        "confidence": 0.3,
+        "nodes_queried": [
+          "Minorities"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 2,
+        "explanation": "The text implies that white students feel marginalized and are forming unions to give voice to their frustration, reinforcing the stereotype that the white race perceives itself as being 'driven out' or displaced by minority groups. This reflects an implicit bias that white individuals are consistently victimized by demographic shifts and minority gains.",
+        "confidence": 0.65,
+        "nodes_queried": [
+          "Student union",
+          "White race"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "white race",
+            "predicate": "has stereotype",
+            "object": "the hite race are being driven out by minorities",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "white race",
+              "p": "has stereotype",
+              "o": "the hite race are being driven out by minorities"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "4c54f17d-56c6-468d-9fa0-27ee35bcca6a",
+    "text": "No officer I wasn't drunk driving, I was swerving on them hoes.",
+    "target": [
+      "women"
+    ],
+    "final_confidence": 0.3,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The speaker denies the officer’s claim of drunk driving while admitting to dangerous swerving, but uses the slang term \"hoes,\" a derogatory reference to women. This choice of language not only downplays personal responsibility but also introduces a gendered bias, implying a dismissive or misogynistic attitude. The overall tone reinforces a stereotype of reckless male drivers who justify unsafe behavior through casual or demeaning language.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The statement uses the slang term \"hoes\" to describe women, reducing them to a derogatory stereotype of promiscuity and objectification. This reflects an implicit misogynistic bias that demeans women as sexual objects.",
+        "confidence": 0.3,
+        "nodes_queried": [
+          "women"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "ffe1e6b5-2b9c-4ac8-ba0c-ad085af7ac03",
+    "text": "What's an Arabic's favorite bathroom accessory? a bath bomb",
+    "target": [
+      "arabic folks",
+      "muslim folks"
+    ],
+    "final_confidence": 0.3,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence is a joke that relies on a harmful stereotype linking Arabic people to bombs and terrorism. By posing a question about an Arabic person’s favorite bathroom accessory and answering with \"a bath bomb,\" it plays on the word \"bomb\" to suggest that Arabs are associated with explosive weapons. This conflates a cultural identity with violence, reinforcing a negative bias and perpetuating a caricature that portrays Arabs as inherently linked to terrorism. The implicit meaning is that Arabs enjoy or are associated with bombs, a reductive and offensive generalization that ignores the diversity of Arabic peoples and cultures.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The joke attempts to link an Arabic person with a specific bathroom accessory, implying a stereotypical preference for bath bombs. By attributing a particular luxury item to an entire cultural group, it reinforces a narrow, caricatured view of that group, thereby exhibiting an implicit cultural bias.",
+        "confidence": 0.3,
+        "nodes_queried": [
+          "arabic folks",
+          "muslim folks"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 2,
+        "explanation": "The joke attempts to link an Arabic person with a specific bathroom accessory, implying a stereotypical preference for bath bombs. By attributing a particular luxury item to an entire cultural group, it reinforces a narrow, caricatured view of that group, thereby exhibiting an implicit cultural bias.",
+        "confidence": 0.3,
+        "nodes_queried": [
+          "Arab",
+          "Bath bomb"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "9f6566c6-4181-470d-956f-bb4eef9ec1dd",
+    "text": "For your viewing pleasure, a full album of defending feminism in this subreddit, and then getting banned from the feminism subreddit",
+    "target": [
+      "women"
+    ],
+    "final_confidence": 0.72,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence is a sarcastic or ironic remark that suggests a person produced a full‐length set (likely a video or audio ‘album’) arguing in favor of feminism, posted it on a feminist subreddit, and was subsequently banned from that subreddit.  The implicit meaning is that the subreddit is portrayed as hypocritical or overzealous—able to admit content that defends feminism yet simultaneously punish the poster for doing so.  This reflects a negative bias against the feminist subreddit’s moderation practices, implying it is intolerant of defenders of feminism or that it enforces its own rules in a way that feels unfair or contradictory.  The tone conveys resentment or criticism toward the community’s perceived intolerance.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The statement implies that even within a feminist subreddit, content defending feminism can be dismissed or penalized, reflecting an implicit bias that feminist viewpoints are not readily accepted or are actively suppressed. This reinforces negative stereotypes about women's ability to speak or be heard, mirroring broader societal biases that marginalize women’s perspectives.",
+        "confidence": 0.62,
+        "nodes_queried": [
+          "women"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "women",
+            "predicate": "has stereotype",
+            "object": "women deserve to be mistreated",
+            "source": "local"
+          },
+          {
+            "subject": "women",
+            "predicate": "has stereotype",
+            "object": "men only want sex from women.",
+            "source": "local"
+          },
+          {
+            "subject": "women",
+            "predicate": "has stereotype",
+            "object": "women try to sound normal, but they arent",
+            "source": "local"
+          },
+          {
+            "subject": "women",
+            "predicate": "has stereotype",
+            "object": "women are skanks",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "women",
+              "p": "has stereotype",
+              "o": "women deserve to be mistreated"
+            },
+            {
+              "s": "women",
+              "p": "has stereotype",
+              "o": "men only want sex from women."
+            },
+            {
+              "s": "women",
+              "p": "has stereotype",
+              "o": "women try to sound normal, but they arent"
+            },
+            {
+              "s": "women",
+              "p": "has stereotype",
+              "o": "women are skanks"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "explanation": "The passage implies that feminist content within a subreddit is likely to be met with hostility or censorship, suggesting an implicit bias that feminists are unwelcome or deemed problematic in that community. This aligns with the stereotypes provided that Reddit is seen as stupid and easily entertained, which may foster an environment where dissenting or socially progressive viewpoints are dismissed or punished, such as banning users who defend feminism.",
+        "confidence": 0.6,
+        "nodes_queried": [
+          "Reddit",
+          "Feminist movement"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "reddit",
+            "predicate": "has stereotype",
+            "object": "reddit is stupid",
+            "source": "local"
+          },
+          {
+            "subject": "reddit",
+            "predicate": "has stereotype",
+            "object": "reddit is easily entertained",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "reddit",
+              "p": "has stereotype",
+              "o": "reddit is stupid"
+            },
+            {
+              "s": "reddit",
+              "p": "has stereotype",
+              "o": "reddit is easily entertained"
+            }
+          ]
+        }
+      },
+      {
+        "step": 3,
+        "explanation": "The sentence conveys an implicit bias that feminist subreddits are exclusionary or hostile even toward those who claim to defend feminism. It frames the community as policing discourse and imposing ideological purity, thereby reinforcing a stereotype that feminist online spaces are intolerant or arbitrarily censorious.",
+        "confidence": 0.7,
+        "nodes_queried": [
+          "Feminism",
+          "Subreddit"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "subreddit",
+            "predicate": "externalurl",
+            "object": "http:",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "subreddits",
+            "predicate": "externalurl",
+            "object": "http:",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "subreddit",
+            "predicate": "hascontext",
+            "object": "internet",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "subreddit",
+            "predicate": "relatedto",
+            "object": "discussion",
+            "source": "conceptnet"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "conceptnet": [
+            {
+              "s": "subreddit",
+              "p": "externalurl",
+              "o": "http:"
+            },
+            {
+              "s": "subreddits",
+              "p": "externalurl",
+              "o": "http:"
+            },
+            {
+              "s": "subreddit",
+              "p": "hascontext",
+              "o": "internet"
+            },
+            {
+              "s": "subreddit",
+              "p": "relatedto",
+              "o": "discussion"
+            }
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "explanation": "The statement implies a bias that feminist viewpoints are routinely rejected or penalized in online communities, suggesting a stereotype that feminist content is viewed as objectionable and that such communities actively enforce bans against defenders of feminism. This reflects an implicit perception of hostility toward feminist discourse within internet forums and subreddits.",
+        "confidence": 0.72,
+        "nodes_queried": [
+          "Internet forum"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "internet forum",
+            "predicate": "http://www.wikidata.org/prop/direct/p279",
+            "object": "social media",
+            "source": "wikidata"
+          },
+          {
+            "subject": "internet forum",
+            "predicate": "http://www.wikidata.org/prop/direct/p279",
+            "object": "service on internet",
+            "source": "wikidata"
+          },
+          {
+            "subject": "internet forum",
+            "predicate": "http://www.wikidata.org/prop/direct/p279",
+            "object": "online community",
+            "source": "wikidata"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "wikidata": [
+            {
+              "s": "internet forum",
+              "p": "http://www.wikidata.org/prop/direct/p279",
+              "o": "social media"
+            },
+            {
+              "s": "internet forum",
+              "p": "http://www.wikidata.org/prop/direct/p279",
+              "o": "service on internet"
+            },
+            {
+              "s": "internet forum",
+              "p": "http://www.wikidata.org/prop/direct/p279",
+              "o": "online community"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "403a9c2b-d0bf-47cc-8667-c5b5a3bcb1ae",
+    "text": "so a mexican guy gets struck by lightning . <repeat> the obituary was titled \" refried beaner ! \"",
+    "target": [
+      "latino/latina folks"
+    ],
+    "final_confidence": 0.0,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The text uses the derogatory slur \"beaner\"—a racist epithet aimed at Mexicans—to label a deceased person’s obituary. This choice of language conveys an explicit bias that dehumanizes and mocks Mexican people, relying on a negative stereotype. The implicit meaning is that the author is intentionally employing hateful, demeaning language to ridicule and perpetuate a harmful stereotype about Mexicans.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "19bef9c3-5be4-4258-bf5d-74e011bf314d",
+    "text": "Did you hear about those Vegas Shootings? It got me thinking, concerts should stop having open bars, people take too many shots!",
+    "target": [
+      "mass shooting victims"
+    ],
+    "final_confidence": 0.3,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The speaker implicitly links gun violence in Vegas to the culture of drinking at concerts. By saying that people ‘take too many shots’ and suggesting that concerts should stop having open bars, the speaker frames excessive alcohol consumption as a contributing factor to shootings. This conveys a bias that concertgoers and the entertainment industry are irresponsible or even responsible for gun violence, stereotyping them as excessive drinkers who provoke or enable violent incidents.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The statement links open bars at concerts with violent incidents by suggesting that the availability of alcohol (people taking too many shots) is a contributing factor to shootings. This reflects an implicit bias that associates alcohol consumption—particularly in social or entertainment settings—with violent behavior, reinforcing a stereotype that drinkers or crowds at concerts are prone to aggression.",
+        "confidence": 0.3,
+        "nodes_queried": [
+          "mass shooting victims"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "e1ce0a28-430b-4df5-9046-fbd2c9dac974",
+    "text": "\"@PatrickQuelo: If yo girl cant have homeboys you a ol weak bitch ass nigga!\"",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.85,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The tweet employs several layers of derogatory language to attack both the speaker’s masculinity and the character of their partner.  The phrase “If yo girl cant have homeboys you a ol weak bitch ass nigga!” assumes that a ‘real’ male identity is tied to having a close circle of male friends (“homeboys”), and it implies that a woman who does not socialize with such a group makes the speaker weak or inferior.  This is a sexist stereotype that reduces women to a tool for proving male toughness.  The use of the racial slur ‘nigga’ adds a hateful, racially charged insult, targeting a specific ethnic group.  Together, the statement reflects misogynistic bias, a stereotype of male friendship as essential to masculinity, and overt racial harassment.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The tweet employs the racial slur \"nigga\" and asserts that a black man who is not perceived as dominant—because his girlfriend does not have male friends—merely because he is \"weak.\" This reflects an implicit bias that ties black masculinity to dominance over women and reliance on male companionship, reinforcing a stereotype of black men as misogynistic and hyper‑masculine while simultaneously perpetuating racist language. The statement relies on a racially charged insult to delegitimize a black man's masculinity, thereby reinforcing negative racial stereotypes and misogynistic expectations.",
+        "confidence": 0.85,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "alludes to violence toward blacks",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "are bought",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "all blacks go to prison.",
+            "source": "local"
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "black folks are items",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "alludes to violence toward blacks"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "are bought"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "all blacks go to prison."
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "black folks are items"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "explanation": "The tweet reflects an implicit sexist bias that equates a man’s strength with having a male social circle (homeboys). It reinforces gender stereotypes that men should have male friends and that a woman’s lack of such friendships is a sign of a weak male partner. This stereotype marginalizes men who do not conform to traditional masculine norms and perpetuates a narrow definition of masculinity.",
+        "confidence": 0.82,
+        "nodes_queried": [
+          "Racist slur",
+          "Misogyny"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "anti_misogyny",
+            "predicate": "antonym",
+            "object": "misogyny",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "misogyny",
+            "predicate": "antonym",
+            "object": "misandry",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "misogyny",
+            "predicate": "antonym",
+            "object": "philogyny",
+            "source": "conceptnet"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "conceptnet": [
+            {
+              "s": "anti_misogyny",
+              "p": "antonym",
+              "o": "misogyny"
+            },
+            {
+              "s": "misogyny",
+              "p": "antonym",
+              "o": "misandry"
+            },
+            {
+              "s": "misogyny",
+              "p": "antonym",
+              "o": "philogyny"
+            }
+          ]
+        }
+      },
+      {
+        "step": 3,
+        "explanation": "The statement relies on a gendered stereotype that defines masculinity by the presence of male friends (homeboys). It portrays a man who cannot be associated with this hypermasculine norm as weak, reinforcing the idea that masculinity requires a specific social network and that deviation from it signals feminization or weakness. This bias aligns with the concept of hypermasculinity and contrasts with antimasculine stereotypes, linking the speaker’s insult to gendered notions of strength.",
+        "confidence": 0.85,
+        "nodes_queried": [
+          "Q184045",
+          "Q164842"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "femininity",
+            "predicate": "antonym",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "masculinity",
+            "predicate": "antonym",
+            "object": "femininity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "womanhood",
+            "predicate": "antonym",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "antimasculinity",
+            "predicate": "derivedfrom",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "hypermasculinity",
+            "predicate": "derivedfrom",
+            "object": "masculinity",
+            "source": "conceptnet"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "conceptnet": [
+            {
+              "s": "femininity",
+              "p": "antonym",
+              "o": "masculinity"
+            },
+            {
+              "s": "masculinity",
+              "p": "antonym",
+              "o": "femininity"
+            },
+            {
+              "s": "womanhood",
+              "p": "antonym",
+              "o": "masculinity"
+            },
+            {
+              "s": "antimasculinity",
+              "p": "derivedfrom",
+              "o": "masculinity"
+            },
+            {
+              "s": "hypermasculinity",
+              "p": "derivedfrom",
+              "o": "masculinity"
+            }
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "explanation": "The statement implicitly reinforces a gendered stereotype that links a woman’s social value and perceived strength to her association with male friends. By implying that a girl who does not have ‘homeboys’ is weak, it perpetuates a bias that equates masculinity with power and undermines femininity by suggesting that a woman’s lack of male companionship signals weakness or inadequacy.",
+        "confidence": 0.85,
+        "nodes_queried": [
+          "Masculinity",
+          "Femininity"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "femininity",
+            "predicate": "antonym",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "masculinity",
+            "predicate": "antonym",
+            "object": "femininity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "womanhood",
+            "predicate": "antonym",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "antimasculinity",
+            "predicate": "derivedfrom",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "hypermasculinity",
+            "predicate": "derivedfrom",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "femininity",
+            "predicate": "antonym",
+            "object": "masculinity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "manhood",
+            "predicate": "antonym",
+            "object": "femininity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "masculinity",
+            "predicate": "antonym",
+            "object": "femininity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "virility",
+            "predicate": "antonym",
+            "object": "femininity",
+            "source": "conceptnet"
+          },
+          {
+            "subject": "antifemininity",
+            "predicate": "derivedfrom",
+            "object": "femininity",
+            "source": "conceptnet"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "conceptnet": [
+            {
+              "s": "femininity",
+              "p": "antonym",
+              "o": "masculinity"
+            },
+            {
+              "s": "masculinity",
+              "p": "antonym",
+              "o": "femininity"
+            },
+            {
+              "s": "womanhood",
+              "p": "antonym",
+              "o": "masculinity"
+            },
+            {
+              "s": "antimasculinity",
+              "p": "derivedfrom",
+              "o": "masculinity"
+            },
+            {
+              "s": "hypermasculinity",
+              "p": "derivedfrom",
+              "o": "masculinity"
+            },
+            {
+              "s": "femininity",
+              "p": "antonym",
+              "o": "masculinity"
+            },
+            {
+              "s": "manhood",
+              "p": "antonym",
+              "o": "femininity"
+            },
+            {
+              "s": "masculinity",
+              "p": "antonym",
+              "o": "femininity"
+            },
+            {
+              "s": "virility",
+              "p": "antonym",
+              "o": "femininity"
+            },
+            {
+              "s": "antifemininity",
+              "p": "derivedfrom",
+              "o": "femininity"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "3d69ebfa-777c-4b9e-8858-eae8626e0e5c",
+    "text": "4chan have anon, Reddit have Redditors, so what does Instagram have? Extra chromosomes",
+    "target": [
+      "folks with mental illness/disorder, mentally disabled folks"
+    ],
+    "final_confidence": 0.0,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The statement plays on a meme‑style comparison: it equates users of Instagram to having ‘extra chromosomes,’ a derogatory euphemism implying intellectual disability or incompetence. Implicitly, it asserts that Instagram users are less intelligent or mentally impaired, a harmful stereotype targeting an entire platform’s audience. This is an explicit bias that dehumanizes and disparages that group. The meaning and bias are clear and direct.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "cdb08dc1-7082-46c8-bb5a-9a946c1c706b",
+    "text": "@user &gt; non è vero che non si pagano i biglietti, anzi negli ultimi anni i controlli sono aumentati. Non è vero che gli immigrati lo pagano, i controllori per i noti motivi tendono ad evitare di passare guai quando li vedono - passano avanti",
+    "target": [
+      "immigrati"
+    ],
+    "final_confidence": 0.85,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The passage conveys the idea that while overall ticket‑check frequency has risen, there is a specific, unsubstantiated claim that immigrant passengers rarely pay their fares. It suggests that inspectors, aware of the social stigma and potential backlash, deliberately overlook fare evasion by immigrants and allow them to pass without penalty. Implicitly, this reinforces a stereotype that immigrants are prone to non‑compliance and that authorities tacitly tolerate this behavior, thereby legitimizing a biased view of immigrant conduct.",
+        "confidence": 0.85,
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The text implicitly associates immigrants with non‑payment of tickets, reinforcing a stereotype that they are law‑breakers or delinquents who avoid financial obligations.",
+        "confidence": 0.85,
+        "nodes_queried": [
+          "immigrati"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "i migranti invadono il paese",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "i migranti non vogliono nuovi migranti",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "migranti sono delinquenti",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "l'immigrazione in italia è senza controllo",
+            "source": "local"
+          },
+          {
+            "subject": "immigrati",
+            "predicate": "has stereotype",
+            "object": "i migranti richiedono punizioni severe",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "i migranti invadono il paese"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "i migranti non vogliono nuovi migranti"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "migranti sono delinquenti"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "l'immigrazione in italia è senza controllo"
+            },
+            {
+              "s": "immigrati",
+              "p": "has stereotype",
+              "o": "i migranti richiedono punizioni severe"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "explanation": "The user’s remark conveys a stereotype that immigrants are more likely to evade paying transportation fares and that authorities tend to overlook such behavior. This reflects an implicit bias portraying immigrants as noncompliant with civic rules and as beneficiaries of preferential treatment.",
+        "confidence": 0.85,
+        "nodes_queried": [
+          "Immigrant",
+          "Ticket"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "immigrant",
+            "predicate": "has stereotype",
+            "object": "immigrants depress american wages",
+            "source": "local"
+          },
+          {
+            "subject": "immigrant",
+            "predicate": "has stereotype",
+            "object": "immigrant should not be accepted into the country.",
+            "source": "local"
+          },
+          {
+            "subject": "immigrant",
+            "predicate": "has stereotype",
+            "object": "immigrant countries are wild",
+            "source": "local"
+          },
+          {
+            "subject": "immigrant",
+            "predicate": "has stereotype",
+            "object": "immigrant are wage depressors",
+            "source": "local"
+          },
+          {
+            "subject": "immigrant",
+            "predicate": "has stereotype",
+            "object": "immigrant are not welcome",
+            "source": "local"
+          }
+        ],
+        "reached_threshold": false,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "immigrant",
+              "p": "has stereotype",
+              "o": "immigrants depress american wages"
+            },
+            {
+              "s": "immigrant",
+              "p": "has stereotype",
+              "o": "immigrant should not be accepted into the country."
+            },
+            {
+              "s": "immigrant",
+              "p": "has stereotype",
+              "o": "immigrant countries are wild"
+            },
+            {
+              "s": "immigrant",
+              "p": "has stereotype",
+              "o": "immigrant are wage depressors"
+            },
+            {
+              "s": "immigrant",
+              "p": "has stereotype",
+              "o": "immigrant are not welcome"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

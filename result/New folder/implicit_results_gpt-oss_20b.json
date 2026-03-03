@@ -1,0 +1,325 @@
+[
+  {
+    "id": "ef9947c9-1f99-495b-9a37-d96ada183a43",
+    "text": "But at least your family wasn't Jewish!",
+    "target": [
+      "jewish folks"
+    ],
+    "final_confidence": 0.4,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The phrase \"But at least your family wasn’t Jewish!\" is an implicit expression of anti‑Semitic bias that equates Jewish identity with something undesirable or problematic. By implying that not being Jewish is a positive or preferable state, the speaker invokes negative stereotypes about Jewish people—such as associating them with greed, cunning, or other negative traits—while simultaneously presenting the speaker’s own stance as more favorable. The use of the word ‘but’ also serves to dismiss or undermine the target’s experience, reinforcing the prejudiced stance. Overall, the statement is a microaggressive, stereotype‑laden remark that conveys an implicit devaluation of Jewish identity.",
+        "confidence": 0.85,
+        "nodes_queried": [],
+        "available_triples": [],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The statement \"But at least your family wasn't Jewish!\" expresses a negative attitude toward Jewish identity, but it does not explicitly refer to any of the stereotypes listed in the triples. Consequently, none of the provided triples directly match the content of the text.",
+        "confidence": 0.0,
+        "nodes_queried": [
+          "jewish folks"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 2,
+        "explanation": "None of the provided triples directly reference or imply the negative stereotype that being Jewish is undesirable, as the triples only mention derived relationships involving terms like holocaustianity, holocash, and hoaxocaust. Therefore, no explicit match exists.",
+        "confidence": 0.0,
+        "nodes_queried": [
+          "Q11061",
+          "Q10269"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 3,
+        "explanation": "None of the provided triples explicitly state or imply a negative stereotype about Judaism or Jewish people that directly matches the remark in the text.",
+        "confidence": 0.4,
+        "nodes_queried": [
+          "Judaism",
+          "Holocaust"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "c8bd645a-5b7c-48b1-8b35-2aacdef2b5db",
+    "text": "most recent fake feminist luring unschooled into mohammed trap of subjugation & abuse ; learn kill plan at",
+    "target": [
+      "Muslims"
+    ],
+    "final_confidence": 0.95,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The passage presents a strongly biased and hateful narrative that portrays feminism as a deceptive and harmful movement, claiming it lures naïve individuals into a \"Mohammed trap\"—a derogatory reference that conflates Muslim faith with oppression. The language frames Muslims and feminist ideology as villains, suggesting they subjugate and abuse others, and it ends with a call to \"learn kill plan,\" implying violent or extremist action. The implicit meaning is an extremist propaganda piece designed to delegitimize feminist causes, vilify Muslims, and incite violence or hostility against those groups.",
+        "confidence": 0.85,
+        "nodes_queried": [],
+        "available_triples": [],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "Triple 0 explicitly states that \"muslims are violent and kill those who do not agree with them,\" which directly matches the violent subjugation stereotype expressed in the text.",
+        "confidence": 0.95,
+        "nodes_queried": [
+          "Muslims"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "muslims",
+            "predicate": "has stereotype",
+            "object": "muslims are violent and kill those who do not agree with them",
+            "source": "local",
+            "semantic_score": 0.4653773903846741
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "muslims",
+              "p": "has stereotype",
+              "o": "muslims are violent and kill those who do not agree with them"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "e8484746-814c-40f5-aa51-8e23689427e4",
+    "text": "Why do they have trees in the ghetto? Mass transit.",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.0,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The utterance \"Why do they have trees in the ghetto? Mass transit.\" is a sarcastic, stereotype‑laden comment that treats the presence of trees in a low‑income urban neighborhood as surprising or anomalous. The speaker assumes that a ghetto is a place where greenery is unexpected and then offers an implausible, bureaucratic explanation – that the trees exist because of mass transit infrastructure. This reflects a bias that equates a \"ghetto\" with an absence of natural or aesthetic features and a perception that modern amenities (like public transit) are the only forces capable of improving or beautifying such neighborhoods. The joke thus reinforces negative stereotypes about inner‑city, low‑income areas while attributing their value to external infrastructural interventions rather than to community agency or natural processes.",
+        "confidence": 0.8,
+        "nodes_queried": [],
+        "available_triples": [],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "None of the provided triples directly and explicitly match the content or stereotype expressed in the text \"Why do they have trees in the ghetto? Mass transit.\" The text does not reference any of the specific stereotype claims about black folks (being items, being bought, incarceration, or violence) found in the triples.",
+        "confidence": 0.0,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 2,
+        "explanation": "None of the provided triples mention trees or the presence of trees in the ghetto, so they do not directly support the stereotype expressed in the text. The triples describe negative aspects (drug, crack houses, etc.) but lack any explicit link to trees.",
+        "confidence": 0.0,
+        "nodes_queried": [
+          "Q1448",
+          "Q11641"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 3,
+        "explanation": "None of the provided triples explicitly link trees to a ghetto, so there is no direct evidence of the stereotype in the supplied data.",
+        "confidence": 0.0,
+        "nodes_queried": [
+          "Tree",
+          "Ghetto"
+        ],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      }
+    ]
+  },
+  {
+    "id": "d0670f83-5a78-43bf-a5fc-591a325981e1",
+    "text": "Aw he was going to send the money back to his niglet family in nigeria ...",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.95,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The sentence uses the pejorative term \"niglet,\" a derogatory slur derived from \"nigger\" and aimed at black people, particularly of African descent. By labeling the subject as a \"niglet family\" it immediately dehumanizes and otherizes the individual, framing him as an inferior or stereotype of a black immigrant. The mention that he is \"going to send the money back to his family in Nigeria\" plays into a common trope that people of African origin are dependent on family support, often portrayed as economically disadvantaged or as perpetual migrants. Together, the language signals a racist bias: it reinforces negative stereotypes about black immigrants as unproductive, reliant on remittances, and deserving of contempt. The implicit meaning is that the speaker views this person through a lens of prejudice, reducing him to a caricature rather than recognizing him as an individual.\n\nConfidence: 0.9",
+        "confidence": 0.85,
+        "nodes_queried": [],
+        "available_triples": [],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "All four provided triples explicitly state stereotypes associated with black people: (0) associates black folks with a prison stereotype; (1) links them to being bought; (2) treats them as items; and (3) suggests violence toward black folks. Each triple documents a negative cultural association or bias.",
+        "confidence": 0.95,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "all blacks go to prison.",
+            "source": "local",
+            "semantic_score": 0.1422683298587799
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "are bought",
+            "source": "local",
+            "semantic_score": 0.1365196704864502
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "black folks are items",
+            "source": "local",
+            "semantic_score": 0.13315726816654205
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "alludes to violence toward blacks",
+            "source": "local",
+            "semantic_score": 0.07095593959093094
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "all blacks go to prison."
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "are bought"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "black folks are items"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "alludes to violence toward blacks"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "b5f43b35-ccbb-4ac2-ae4b-01914363b12c",
+    "text": "Why do black people like basketball? Because you run, jump, shoot, and steal",
+    "target": [
+      "black folks"
+    ],
+    "final_confidence": 0.95,
+    "steps": [
+      {
+        "step": 0,
+        "explanation": "The statement employs a racial stereotype that links Black identity with inherent athletic traits—speed, jumping, shooting, and ‘stealing’—and assumes that these traits naturally attract Black people to basketball. It reduces a complex, culturally and individually diverse set of interests to a single, race‑based explanation, reinforcing the trope of Black people as uniformly athletic and overlooking other social, economic, and personal factors that shape sports preferences. This generalization is biased, perpetuating a harmful stereotype that conflates race with talent and passion for a particular sport.",
+        "confidence": 0.85,
+        "nodes_queried": [],
+        "available_triples": [],
+        "relevant_triples": [],
+        "reached_threshold": false,
+        "kg_by_source_summary": {}
+      },
+      {
+        "step": 1,
+        "explanation": "The provided triples explicitly state that black folks are reduced to stereotypes: they are portrayed as ‘bought’ or ‘items’, alluded to violence toward blacks, and linked to imprisonment. These statements document a negative cultural association and reinforce harmful bias about black people.",
+        "confidence": 0.95,
+        "nodes_queried": [
+          "black folks"
+        ],
+        "relevant_triples": [
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "are bought",
+            "source": "local",
+            "semantic_score": 0.524612307548523
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "alludes to violence toward blacks",
+            "source": "local",
+            "semantic_score": 0.49034783244132996
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "black folks are items",
+            "source": "local",
+            "semantic_score": 0.46809083223342896
+          },
+          {
+            "subject": "black folks",
+            "predicate": "has stereotype",
+            "object": "all blacks go to prison.",
+            "source": "local",
+            "semantic_score": 0.4404839277267456
+          }
+        ],
+        "reached_threshold": true,
+        "kg_by_source_summary": {
+          "local": [
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "are bought"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "alludes to violence toward blacks"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "black folks are items"
+            },
+            {
+              "s": "black folks",
+              "p": "has stereotype",
+              "o": "all blacks go to prison."
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
