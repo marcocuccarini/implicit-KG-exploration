@@ -5,7 +5,7 @@ from ragas import evaluate
 from ragas.metrics import faithfulness, answer_relevancy, context_precision
 
 
-RESULTS_PATH = "results.json"
+RESULTS_PATH = "result/implicit_results_gemma3_4b.json"
 
 KG_SOURCES = ["wikidata", "conceptnet", "local"]
 ALL_SOURCES = KG_SOURCES + ["all"]
