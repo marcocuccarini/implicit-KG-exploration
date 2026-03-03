@@ -1,9 +1,28 @@
+import os
 import json
 from collections import defaultdict
 from datasets import Dataset
+
 from ragas import evaluate
 from ragas.metrics import faithfulness, answer_relevancy, context_precision
 
+# -------------------------
+# 🔐 INSERT YOUR TOKEN HERE
+# -------------------------
+os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"
+
+# -------------------------
+# Explicitly configure ChatGPT model for RAGAS
+# -------------------------
+from ragas.llms import LangchainLLMWrapper
+from langchain_openai import ChatOpenAI
+
+llm = LangchainLLMWrapper(
+    ChatOpenAI(
+        model="gpt-4o",   # you can change to "gpt-3.5-turbo"
+        temperature=0
+    )
+)
 
 RESULTS_PATH = "result/implicit_results_gemma3_4b.json"
 
@@ -15,7 +34,6 @@ ALL_SOURCES = KG_SOURCES + ["all"]
 # Triple → readable text
 # -------------------------
 def triple_to_text(triple):
-
     s = triple.get("subject", "")
     p = triple.get("predicate", "")
     o = triple.get("object", "")
@@ -30,18 +48,14 @@ def triple_to_text(triple):
 # Filter triples by KG
 # -------------------------
 def filter_triples(triples, source):
-
     if source == "all":
         return triples
 
-    return [
-        t for t in triples
-        if t.get("source") == source
-    ]
+    return [t for t in triples if t.get("source") == source]
 
 
 # -------------------------
-# Build datasets per step AND per KG
+# Build datasets
 # -------------------------
 def build_datasets(results):
 
@@ -58,7 +72,6 @@ def build_datasets(results):
         for step in row.get("steps", []):
 
             step_id = step.get("step")
-
             explanation = step.get("explanation", "")
             triples = step.get("relevant_triples", [])
 
@@ -68,13 +81,8 @@ def build_datasets(results):
             for kg in ALL_SOURCES:
 
                 filtered = filter_triples(triples, kg)
+                contexts = [triple_to_text(t) for t in filtered]
 
-                contexts = [
-                    triple_to_text(t)
-                    for t in filtered
-                ]
-
-                # step 0 special case
                 if step_id == 0:
                     contexts = ["No KG used"]
 
@@ -85,7 +93,6 @@ def build_datasets(results):
                 datasets[step_id][kg]["contexts"].append(contexts)
                 datasets[step_id][kg]["answer"].append(explanation)
 
-    # convert to HuggingFace datasets
     hf_datasets = {}
 
     for step_id, kg_data in datasets.items():
@@ -98,14 +105,13 @@ def build_datasets(results):
                 continue
 
             hf_datasets[step_id][kg] = Dataset.from_dict(data)
-
             print(f"Step {step_id} | KG {kg} | samples: {len(data['question'])}")
 
     return hf_datasets
 
 
 # -------------------------
-# Evaluate everything
+# Evaluate
 # -------------------------
 def evaluate_all(hf_datasets):
 
@@ -127,18 +133,18 @@ def evaluate_all(hf_datasets):
                     faithfulness,
                     answer_relevancy,
                     context_precision
-                ]
+                ],
+                llm=llm   # ✅ pass configured ChatGPT model
             )
 
             final_scores[step_id][kg] = scores
-
             print(scores)
 
     return final_scores
 
 
 # -------------------------
-# Pretty print results
+# Print summary
 # -------------------------
 def print_summary(scores):
 
