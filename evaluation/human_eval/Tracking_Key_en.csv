@@ -1,0 +1,3 @@
+Row_ID,Original_ID,Baseline_Location (A/B),Improved_Location (A/B),Improved_Step_Number
+Row_001,c4797dc4-3015-40f9-b3e2-406b4bcf60b0,B,A,1
+Row_002,e814c15f-ec15-4ba2-81e1-b7269dff4bdf,A,B,1

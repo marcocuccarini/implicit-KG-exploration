@@ -5,45 +5,67 @@ from pathlib import Path
 # ----------------------------
 # Paths
 # ----------------------------
-INPUT_DIR = Path("result")  # folder with JSON result files
+INPUT_DIR = Path("result")
 OUTPUT_DIR = Path("evaluation/automatic_eval")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-REFERENCE_CSV = Path("data/data/dataset_split_test.csv")  # CSV containing unique_id, text_implied, stereotype
+REFERENCE_CSV = Path("data/data/dataset_split_test.csv")
 
 # ----------------------------
 # Load reference CSV by unique_id
 # ----------------------------
 unique_id_lookup = {}
+
 with open(REFERENCE_CSV, newline="", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        # Store as JSON strings to preserve lists
         unique_id_lookup[row["unique_id"]] = {
             "implicit_text": row.get("text_implied", "[]"),
             "stereotype": row.get("stereotype", "[]")
         }
 
 # ----------------------------
-# Process all JSON files
+# Load all JSON files
 # ----------------------------
 json_files = list(INPUT_DIR.glob("*.json"))
 
+all_data = {}
+all_id_sets = []
+
 for json_file in json_files:
-
-    print(f"\nProcessing {json_file.name}")
-
     with open(json_file, "r", encoding="utf-8") as f:
         data = json.load(f)
+
+    all_data[json_file] = data
+    ids = {str(item["id"]) for item in data}
+    all_id_sets.append(ids)
+
+# ----------------------------
+# Find common IDs across files
+# ----------------------------
+common_ids = set.intersection(*all_id_sets)
+
+print(f"Total common samples across all JSONs: {len(common_ids)}")
+
+# ----------------------------
+# Process JSON files
+# ----------------------------
+for json_file, data in all_data.items():
+
+    print(f"\nProcessing {json_file.name}")
 
     rows = []
 
     for item in data:
 
-        item_id = str(item["id"])  # JSON UUID
+        item_id = str(item["id"])
+
+        # Skip items not in shared sample set
+        if item_id not in common_ids:
+            continue
+
         text = item["text"]
 
-        # Lookup implicit text and stereotype by unique_id
         if item_id in unique_id_lookup:
             implicit_text = unique_id_lookup[item_id]["implicit_text"]
             stereotype = unique_id_lookup[item_id]["stereotype"]
@@ -53,7 +75,6 @@ for json_file in json_files:
 
         steps_list = item.get("steps", [])
 
-        # Convert steps list to dict with integer keys
         steps = {}
         for s in steps_list:
             try:
@@ -63,7 +84,7 @@ for json_file in json_files:
                 continue
 
         if 0 not in steps:
-            continue  # skip if no baseline
+            continue
 
         baseline_conf = steps[0]["confidence"]
         baseline_text = steps[0]["explanation"]
@@ -106,7 +127,6 @@ for json_file in json_files:
 
         is_improved = 1 if best_step_max != 0 else 0
 
-        # Append all columns
         rows.append([
             item_id,
             text,
@@ -131,6 +151,7 @@ for json_file in json_files:
 
     with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
+
         writer.writerow([
             "id",
             "text",
@@ -146,6 +167,7 @@ for json_file in json_files:
             "implicit_text",
             "stereotype"
         ])
+
         writer.writerows(rows)
 
     print(f"Saved {len(rows)} rows → {output_file}")

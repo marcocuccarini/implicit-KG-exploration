@@ -1,28 +1,28 @@
 import csv
-import ast
+import json
 from pathlib import Path
-from classes.ServerOllama import OllamaServer, OllamaChat, LLMResponse
+from openai import OpenAI
+
+# ===========================
+# Configuration
+# ===========================
+# Initialize the OpenAI client (it will look for OPENAI_API_KEY in your env vars)
+client = OpenAI(api_key="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") 
 
 # ===========================
 # Helper Function
 # ===========================
-def ask_llm_judge(chat_session: OllamaChat, input_text, explanation_a, explanation_b):
+def ask_llm_judge(input_text, explanation_a, explanation_b):
+    # Prompt using the 0-3 groundedness scale
     prompt = f"""
-You are a strict evaluator of explanations for hateful or biased messages.
-Compare two candidate explanations (A and B) with respect to the input sentence.
-Evaluate each along four dimensions using a binary score (1 if the statement is true, 0 otherwise):
+You are an expert evaluator of explanations for hateful or biased messages. 
+Compare two candidate explanations (A and B) based on how well they are grounded in the input text.
 
-1. Linguistic Fluency
-2. Coherence
-3. Relevance
-4. Truthfulness
-
-IMPORTANT: Output ONLY valid JSON in the format below. Do not add any extra text:
-
-{{
-  "Explanation_A": {{"fluency": int, "coherence": int, "relevance": int, "truthfulness": int}},
-  "Explanation_B": {{"fluency": int, "coherence": int, "relevance": int, "truthfulness": int}}
-}}
+SCORING SCALE:
+0 - The response is not consistent with the information contained in the input text.
+1 - Although the implied assumption generated is correct or partially correct, the response is generic or does not contain any explicit or implicit reference to what it has been said in the input text.
+2 - The implied assumption generated is partially correct and grounded in the input text.
+3 - The implied assumption is correct and grounded in the input text.
 
 Input Sentence: "{input_text}"
 Explanation A: "{explanation_a}"
@@ -30,25 +30,31 @@ Explanation B: "{explanation_b}"
 """
 
     try:
-        llm_response: LLMResponse = chat_session.send_prompt(prompt)
-        text = llm_response.raw_text.strip()
+        response = client.chat.completions.create(
+            model="gpt-4o", # Or "gpt-4o-mini" for faster/cheaper processing
+            messages=[
+                {"role": "system", "content": "You are a strict evaluator. Output ONLY valid JSON."},
+                {"role": "user", "content": prompt}
+            ],
+            response_format={"type": "json_object"} # Forces JSON output
+        )
 
-        llm_scores = ast.literal_eval(text)
+        raw_content = response.choices[0].message.content
+        llm_scores = json.loads(raw_content)
 
+        # Validate structure
         if "Explanation_A" not in llm_scores or "Explanation_B" not in llm_scores:
-            raise ValueError("Missing Explanation_A or Explanation_B")
+            raise ValueError("Missing keys in LLM JSON response")
 
-        return llm_scores, llm_response.raw_text
+        return llm_scores, raw_content
 
     except Exception as e:
-        print(f"\n⚠️ Failed to parse LLM output: {e}")
-
+        print(f"\n⚠️ OpenAI API Error: {e}")
         fallback = {
-            "Explanation_A": {"fluency": 0, "coherence": 0, "relevance": 0, "truthfulness": 0},
-            "Explanation_B": {"fluency": 0, "coherence": 0, "relevance": 0, "truthfulness": 0},
+            "Explanation_A": {"score": 0},
+            "Explanation_B": {"score": 0},
         }
-
-        return fallback, llm_response.raw_text if 'llm_response' in locals() else ""
+        return fallback, str(e)
 
 # ===========================
 # Main Evaluation Script
@@ -57,63 +63,49 @@ INPUT_DIR = Path("evaluation/automatic_eval")
 OUTPUT_DIR = Path("evaluation/LLM_eval")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-server = OllamaServer()
-chat_session = OllamaChat(server, model="gemma3:27b")
-
 csv_files = list(INPUT_DIR.glob("*.csv"))
 
 for csv_file in csv_files:
-
     print(f"\nProcessing file: {csv_file.name}")
-
     rows_out = []
 
-    # Read all rows first so we know dataset size
     with open(csv_file, newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
 
     total_rows = len(rows)
-
     print(f"Total rows to evaluate: {total_rows}\n")
 
     for i, row in enumerate(rows, start=1):
-
         input_text = row.get("text", "")
         explanation_a = row.get("baseline_explanation", "")
         explanation_b = row.get("improved_text_max", "")
 
         llm_scores, raw_output = ask_llm_judge(
-            chat_session,
             input_text,
             explanation_a,
             explanation_b
         )
 
-        for key in ["fluency", "coherence", "relevance", "truthfulness"]:
-            row[f"A_{key}"] = llm_scores["Explanation_A"][key]
-            row[f"B_{key}"] = llm_scores["Explanation_B"][key]
-
-        row["A_total"] = sum(llm_scores["Explanation_A"].values())
-        row["B_total"] = sum(llm_scores["Explanation_B"].values())
-
+        # Add the results to the row
+        row["A_groundedness_score"] = llm_scores["Explanation_A"].get("score", 0)
+        row["B_groundedness_score"] = llm_scores["Explanation_B"].get("score", 0)
         row["LLM_raw_output"] = raw_output
 
         rows_out.append(row)
 
-        # ===== Progress display =====
+        # Progress display
         percent = (i / total_rows) * 100
         print(f"\rProgress: {i}/{total_rows} ({percent:.2f}%)", end="")
 
     print("\nSaving results...")
-
     output_file = OUTPUT_DIR / f"{csv_file.stem}_LLM_eval.csv"
 
-    with open(output_file, "w", newline="", encoding="utf-8") as f:
-        fieldnames = list(rows_out[0].keys())
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows_out)
-
-    print(f"Saved evaluated CSV → {output_file}")
+    if rows_out:
+        with open(output_file, "w", newline="", encoding="utf-8") as f:
+            fieldnames = list(rows_out[0].keys())
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows_out)
+        print(f"Saved evaluated CSV → {output_file}")
 
 print("\nAll files processed successfully.")

@@ -1,160 +1,161 @@
 import json
 import csv
 import random
+from langdetect import detect, DetectorFactory
 
-# -----------------------------
-# Load main JSON
-# -----------------------------
+# Ensure deterministic language detection
+DetectorFactory.seed = 0
+
+def detect_language(text):
+    try:
+        return detect(text)
+    except:
+        return "en"
+
+# -------- Load JSON data --------
+json_file = 'result/implicit_results_gpt-oss_20b.json'
 try:
-    with open('result/implicit_results_gpt-oss_20b.json', 'r', encoding='utf-8') as f:
+    with open(json_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 except FileNotFoundError:
-    print("Error: main JSON file not found.")
+    print("Error: JSON file not found.")
     exit()
 
-# -----------------------------
-# Load second baseline JSON
-# -----------------------------
-try:
-    with open('result/baseline_gpt-oss_20b.json', 'r', encoding='utf-8') as f:
-        baseline2_data = json.load(f)
-except FileNotFoundError:
-    print("Error: second baseline JSON file not found.")
-    exit()
+# -------- Load previous CSV for implicit_text & stereotype --------
+prev_csv = 'evaluation/automatic_eval/got-oss_merged.csv'
+id_to_implicit = {}
+with open(prev_csv, 'r', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        id_to_implicit[row['id']] = {
+            'implicit_text': row.get('implicit_text', ''),
+            'stereotype': row.get('stereotype', '')
+        }
 
-baseline2_dict = {item["id"]: item for item in baseline2_data}
-
-annotation_rows = []
-tracking_rows = []
-
-row_counter = 1
+# -------- Collect all valid candidates --------
+valid_en = []
+valid_it = []
 
 for item in data:
-
     item_id = item["id"]
     text = item["text"]
     steps_list = item.get("steps", [])
 
     steps = {s["step"]: s for s in steps_list}
-
     if 0 not in steps:
         continue
 
-    # Baseline 1
-    baseline1_text = steps[0]["explanation"]
-    baseline1_conf = steps[0]["confidence"]
+    baseline_conf = steps[0]["confidence"]
+    baseline_text = steps[0]["explanation"]
 
-    # Baseline 2
-    baseline2 = baseline2_dict.get(item_id)
-    if not baseline2:
-        continue
-
-    baseline2_text = baseline2["explanation"]
-    baseline2_conf = baseline2["confidence"]
-
-    # Candidate improved steps
-    candidate_steps = [
-        (s["step"], s["confidence"])
-        for s in steps_list
-        if 1 <= s["step"] <= 5
-    ]
-
+    candidate_steps = [(s["step"], s["confidence"]) for s in steps_list if 1 <= s["step"] <= 5]
     if not candidate_steps:
         continue
 
     max_conf = max(conf for _, conf in candidate_steps)
-
-    # Improved must beat both baselines
-    if max_conf <= max(baseline1_conf, baseline2_conf):
+    if max_conf <= baseline_conf:
         continue
 
-    best_step = min(
-        step for step, conf in candidate_steps if conf == max_conf
-    )
-
+    best_step = min(step for step, conf in candidate_steps if conf == max_conf)
     improved_text = steps[best_step]["explanation"]
 
-    if row_counter > 50:
-        break
+    lang = detect_language(text)
+    extra = id_to_implicit.get(item_id, {})
+    implicit_text = extra.get('implicit_text', '')
+    stereotype = extra.get('stereotype', '')
 
-    row_label = f"Row_{row_counter:02d}"
+    # Skip items without implicit_text
+    if not implicit_text:
+        continue
 
-    # ---------------------------------
-    # Randomize A/B/C (blind)
-    # ---------------------------------
-    explanations = [
-        ("baseline1", baseline1_text),
-        ("baseline2", baseline2_text),
-        ("improved", improved_text)
-    ]
+    record = {
+        "id": item_id,
+        "text": text,
+        "baseline": baseline_text,
+        "improved": improved_text,
+        "best_step": best_step,
+        "implicit_text": implicit_text,
+        "stereotype": stereotype
+    }
 
-    random.shuffle(explanations)
+    if lang == "it":
+        valid_it.append(record)
+    else:
+        valid_en.append(record)
 
-    explanation_A = explanations[0][1]
-    explanation_B = explanations[1][1]
-    explanation_C = explanations[2][1]
+# -------- Limit to maximum 50 samples per language --------
+sample_en = random.sample(valid_en, min(50, len(valid_en)))
+sample_it = random.sample(valid_it, min(50, len(valid_it)))
 
-    # Annotation file
-    annotation_rows.append([
-        row_label,
-        item_id,
-        text,
-        explanation_A,
-        explanation_B,
-        explanation_C,
-        "", "", "", ""
-    ])
+# -------- Function to create annotation/tracking CSVs --------
+def create_annotation_files(records, lang_code):
+    random.shuffle(records)
+    annotation_rows = []
+    tracking_rows = []
 
-    # Tracking file
-    mapping = {label: pos for pos, (label, _) in zip(["A","B","C"], explanations)}
+    for idx, item in enumerate(records, 1):
+        row_label = f"Row_{idx:03d}"
+        pair = [('baseline', item['baseline']), ('improved', item['improved'])]
+        random.shuffle(pair)
 
-    tracking_rows.append([
-        row_label,
-        item_id,
-        mapping["baseline1"],
-        mapping["baseline2"],
-        mapping["improved"],
-        best_step
-    ])
+        explanation_A = pair[0][1]
+        explanation_B = pair[1][1]
 
-    row_counter += 1
+        # Annotation CSV
+        annotation_rows.append([
+            row_label,
+            item['id'],
+            item['text'],
+            explanation_A,
+            explanation_B,
+            item['implicit_text'],
+            item['stereotype'],
+            "", "", "", ""  # 4 annotator columns
+        ])
 
+        # Tracking CSV
+        tracking_rows.append([
+            row_label,
+            item['id'],
+            "A" if pair[0][0] == "baseline" else "B",
+            "A" if pair[0][0] == "improved" else "B",
+            item['best_step']
+        ])
 
-if row_counter <= 50:
-    print(f"Warning: Only found {row_counter-1} valid cases.")
+    # Write files
+    annotation_file = f'evaluation/human_eval/Human_Annotation_Task_{lang_code}.csv'
+    tracking_file = f'evaluation/human_eval/Tracking_Key_{lang_code}.csv'
 
-# -----------------------------
-# Write annotation file
-# -----------------------------
-with open('evaluation/human_eval/Human_Annotation_Task.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    writer.writerow([
-        'Row_ID',
-        'Original_ID',
-        'Content',
-        'Explanation_A',
-        'Explanation_B',
-        'Explanation_C',
-        'Annotator_1',
-        'Annotator_2',
-        'Annotator_3',
-        'Annotator_4'
-    ])
-    writer.writerows(annotation_rows)
+    with open(annotation_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            'Row_ID',
+            'Original_ID',
+            'Content',
+            'Explanation_A',
+            'Explanation_B',
+            'Implicit_Statement',
+            'Stereotype',
+            'Annotator_1',
+            'Annotator_2',
+            'Annotator_3',
+            'Annotator_4'
+        ])
+        writer.writerows(annotation_rows)
 
-# -----------------------------
-# Write tracking file
-# -----------------------------
-with open('evaluation/human_eval/Tracking_Key.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    writer.writerow([
-        'Row_ID',
-        'Original_ID',
-        'Baseline1_Position',
-        'Baseline2_Position',
-        'Improved_Position',
-        'Improved_Step_Number'
-    ])
-    writer.writerows(tracking_rows)
+    with open(tracking_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            'Row_ID',
+            'Original_ID',
+            'Baseline_Location (A/B)',
+            'Improved_Location (A/B)',
+            'Improved_Step_Number'
+        ])
+        writer.writerows(tracking_rows)
 
-print("Success! Blind annotation file created.")
+    print(f"{lang_code.upper()} annotation files created: {len(records)} rows")
+
+# -------- Generate files --------
+create_annotation_files(sample_en, 'en')
+create_annotation_files(sample_it, 'it')
