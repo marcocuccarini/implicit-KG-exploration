@@ -7,17 +7,20 @@ from openai import OpenAI
 # Configuration
 # ===========================
 
-client = OpenAI(api_key="")  # usa OPENAI_API_KEY dalle env vars
+client = OpenAI()  # will use OPENAI_API_KEY from environment
 
 INPUT_DIR = Path("evaluation/automatic_eval")
-OUTPUT_DIR = Path(".")  # salva nella stessa posizione dello script
+OUTPUT_DIR = Path(".")  # save in same folder as script
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ===========================
 # Helper Function
 # ===========================
 
 def ask_llm_judge(input_text, explanation_a, explanation_b):
-
+    """
+    Ask the LLM to score two explanations on a 0-3 groundedness scale.
+    """
     prompt = f"""
 You are an expert evaluator of explanations for hateful or biased messages.
 
@@ -75,20 +78,17 @@ for csv_file in csv_files:
         rows = list(csv.DictReader(f))
 
     total_rows = len(rows)
-
     print(f"Total rows to evaluate: {total_rows}\n")
 
     output_file = OUTPUT_DIR / f"{csv_file.stem}_LLM_eval.csv"
 
-    # Apri il file in modalità scrittura
+    # Open output CSV and write header
     with open(output_file, "w", newline="", encoding="utf-8") as out_f:
-
         fieldnames = list(rows[0].keys()) + [
             "A_groundedness_score",
             "B_groundedness_score",
             "LLM_raw_output"
         ]
-
         writer = csv.DictWriter(out_f, fieldnames=fieldnames)
         writer.writeheader()
 
@@ -110,13 +110,12 @@ for csv_file in csv_files:
 
             writer.writerow(row)
 
-            # salva subito sul disco
-            out_f.flush()
+            # Save progress every 10 rows (or at last row)
+            if i % 10 == 0 or i == total_rows:
+                out_f.flush()
+                percent = (i / total_rows) * 100
+                print(f"Progress: {i}/{total_rows} ({percent:.2f}%) saved")
 
-            percent = (i / total_rows) * 100
-
-            print(f"\rProgress: {i}/{total_rows} ({percent:.2f}%)", end="")
-
-    print(f"\nSaved evaluated CSV → {output_file}")
+    print(f"Saved evaluated CSV → {output_file}")
 
 print("\nAll files processed successfully.")
